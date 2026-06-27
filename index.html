@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Bijita Didi ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#ffe4ef,#ffd6e7,#fff0f7);
+overflow-x:hidden;
+}
+
+/* Floating Flowers */
+
+.petal{
+position:fixed;
+top:-50px;
+font-size:30px;
+animation:fall linear infinite;
+pointer-events:none;
+z-index:999;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(120vh) rotate(360deg);
+}
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(255,105,180,.25),rgba(255,105,180,.25)),
+url('https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1600&q=80');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-family:'Dancing Script',cursive;
+font-size:5rem;
+text-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+.hero p{
+font-size:1.3rem;
+margin-top:20px;
+}
+
+.cover{
+width:280px;
+height:280px;
+object-fit:cover;
+border-radius:50%;
+border:8px solid white;
+margin-top:30px;
+box-shadow:0 10px 40px rgba(0,0,0,.3);
+}
+
+.btn{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4081;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.music-btn{
+margin-top:15px;
+}
+
+/* Message */
+
+.section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:60px 20px;
+}
+
+.message{
+background:white;
+max-width:900px;
+padding:50px;
+border-radius:30px;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.message h2{
+color:#ff4081;
+margin-bottom:20px;
+font-size:2.5rem;
+text-align:center;
+}
+
+.message p{
+font-size:1.2rem;
+line-height:2;
+color:#444;
+}
+
+/* Gallery */
+
+.gallery{
+padding:80px 20px;
+background:white;
+}
+
+.gallery h2{
+text-align:center;
+color:#ff4081;
+font-size:3rem;
+margin-bottom:40px;
+font-family:'Dancing Script',cursive;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.grid img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+transition:.3s;
+cursor:pointer;
+}
+
+.grid img:hover{
+transform:scale(1.03);
+}
+
+/* Final */
+
+.final{
+height:100vh;
+
+background:
+linear-gradient(rgba(255,105,180,.25),rgba(255,105,180,.25)),
+url('https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1600&q=80');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+text-align:center;
+color:white;
+}
+
+.final h1{
+font-family:'Dancing Script',cursive;
+font-size:5rem;
+text-shadow:0 0 25px rgba(255,255,255,.5);
+}
+
+.final p{
+font-size:1.5rem;
+max-width:900px;
+margin-top:30px;
+padding:0 20px;
+}
+
+/* Lightbox */
+
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="petal" style="left:5%;animation-duration:10s;">🌸</div>
+<div class="petal" style="left:20%;animation-duration:12s;">🌷</div>
+<div class="petal" style="left:40%;animation-duration:8s;">🌹</div>
+<div class="petal" style="left:60%;animation-duration:11s;">💐</div>
+<div class="petal" style="left:80%;animation-duration:9s;">🌸</div>
+
+<audio id="music" autoplay loop>
+<source src="https://www.youtube.com/watch?v=wt3XOKTu7k4" type="audio/mpeg">
+</audio>
+
+<section class="hero">
+
+<h1>🎂 Happy Birthday 🎂</h1>
+<h1>Bijita Didi ❤️</h1>
+
+<p>A special birthday surprise made with love</p>
+
+<img src="photo1.jpg" class="cover" alt="Bijita Didi">
+
+<button class="btn music-btn"
+onclick="document.getElementById('music').play()">
+🎵 Play Music
+</button>
+
+<a href="#message" class="btn">
+💌 Click Here
+</a>
+
+</section>
+
+<section class="section" id="message">
+
+<div class="message">
+
+<h2>💌 A Message From My Heart 💌</h2>
+
+<p>
+
+Dear <b>दिदी</b>,
+
+<br><br>
+
+Thank you for all the happiness, love, care, and support you have given me throughout my life.
+
+You have always been there whenever I needed you.
+
+Thank you for every smile, every lesson, and every memory we have shared together.
+
+<br><br>
+
+This time I could not meet you on your birthday and celebrate with you, and I truly miss being there.
+
+But no matter how far away I am, I want you to know how grateful I am to have you in my life.
+
+<br><br>
+
+Thank you, <b>दिदी</b>, for everything.
+
+Thank you for your love.
+
+Thank you for your support.
+
+Thank you for always believing in me.
+
+<br><br>
+
+I am lucky to have you as my sister.
+
+❤️ Love You Always ❤️
+
+</p>
+
+</div>
+
+</section>
+
+<section class="gallery">
+
+<h2>🌸 Beautiful Memories 🌸</h2>
+
+<div class="grid">
+
+<img src="photo1.jpg" onclick="openLightbox(this.src)" alt="Memory 1">
+<img src="photo2.jpg" onclick="openLightbox(this.src)" alt="Memory 2">
+<img src="photo3.jpg" onclick="openLightbox(this.src)" alt="Memory 3">
+<img src="photo4.jpg" onclick="openLightbox(this.src)" alt="Memory 4">
+
+</div>
+
+</section>
+
+<section class="final">
+
+<h1>🌸 HAPPY BIRTHDAY 🌸</h1>
+
+<h1>🎂 BIJITA DIDI 🎂</h1>
+
+<p>
+
+May your life be filled with happiness,
+success, love, good health,
+and endless beautiful memories.
+
+<br><br>
+
+You deserve all the happiness in the world.
+
+<br><br>
+
+❤️ Happy Birthday ❤️
+
+</p>
+
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<img id="lightboxImg">
+</div>
+
+<script>
+
+function openLightbox(src) {
+  document.getElementById('lightbox').style.display = 'flex';
+  document.getElementById('lightboxImg').src = src;
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+</script>
+
+</body>
+</html>
